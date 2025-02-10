@@ -1,0 +1,155 @@
+:root {
+    --primary-bg: #f4f4f9;
+    --secondary-bg: white;
+    --header-bg: #283747;
+    --header-text: white;
+    --input-border: #ccc;
+    --button-bg: #037988;
+    --button-hover-bg: #155ab6;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 0;
+  }
+  
+  header {
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .container {
+    background-color: var(--secondary-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Increased input width for Project Name & Certification Name */
+  #project_name,
+  #certification_name {
+    width: 100%;
+    grid-column: span 2;
+  }
+  
+  /* Adjust height for textarea fields */
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Make checkboxes and radio buttons align properly */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Radio button styling */
+  input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--header-text);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--button-bg);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+  }
+  
+  /* Styling for full-width elements */
+  #experience,
+  #certifications,
+  #skills,
+  #projects,
+  #achievements,
+  #volunteer {
+    grid-column: span 2;
+    width: 100%;
+  }
+  
+  #experience input,
+  #certifications input,
+  #projects input {
+    width: 100%;
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    grid-column: span 2;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  

@@ -1,0 +1,115 @@
+:root {
+  --primary-bg: #f4f4f9;
+  --secondary-bg: white;
+  --header-bg: #283747;
+  --header-text: white;
+  --input-border: #ccc;
+  --button-bg: #037988;
+  --button-hover-bg: #155ab6;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* No horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-bg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Main Form Container */
+.form-container {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 450px; /* Fixed width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px; /* ✅ Properly pushed below header */
+}
+
+/* Profile Picture Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Circular Image */
+  object-fit: cover; /* No distortion */
+  border: 3px solid var(--header-bg);
+  margin-top: 10px; /* ✅ Ensure it stays inside the flexbox */
+}
+
+/* Form Fields */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}

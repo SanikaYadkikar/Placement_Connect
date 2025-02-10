@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+
+    <header>
+        <img src="vadavli.jpg" alt="Logo" class="logo">
+        <h1>A. P. Shah Institute of Technology</h1>
+    </header>
+
+    <div class="form-container">  <!-- One single flexbox -->
+        
+        <div class="profile-section">
+            <img id="profile-pic" src="default-profile.jpg" alt="">
+            <input type="file" id="upload" accept="image/*">
+        </div>
+
+        <form>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter your first name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter your last name">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+
+            <label for="email">Primary Email</label>
+            <input type="text" id="email" placeholder="Enter your email">
+
+            <label for="academic-year">Academic Year</label>
+            <input type="text" id="academic-year" placeholder="BE">
+
+            <button type="submit">Update Profile</button>
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById("upload").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("profile-pic").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission if validation fails
+        
+        let email = document.getElementById("email");
+        let phone = document.getElementById("phone");
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let phoneRegex = /^[0-9]{10}$/;
+        let isValid = true;
+
+        // Email validation
+        if (!emailRegex.test(email.value)) {
+            email.style.border = "2px solid red";
+            showError(email, "Enter a valid email (e.g., abc@example.com)");
+            isValid = false;
+        } else {
+            email.style.border = "1px solid #ccc";
+            removeError(email);
+        }
+
+        // Phone number validation
+        if (!phoneRegex.test(phone.value)) {
+            phone.style.border = "2px solid red";
+            showError(phone, "Enter a valid 10-digit phone number");
+            isValid = false;
+        } else {
+            phone.style.border = "1px solid #ccc";
+            removeError(phone);
+        }
+
+        // If all validations pass, submit the form
+        if (isValid) {
+            alert("Profile updated successfully!");
+            this.submit();
+        }
+    });
+
+    function showError(input, message) {
+        let error = document.createElement("span");
+        error.className = "error-message";
+        error.style.color = "red";
+        error.style.fontSize = "12px";
+        error.textContent = message;
+
+        // Remove previous error messages
+        removeError(input);
+
+        // Append new error message
+        input.parentNode.insertBefore(error, input.nextSibling);
+    }
+
+    function removeError(input) {
+        let nextElement = input.nextSibling;
+        if (nextElement && nextElement.className === "error-message") {
+            nextElement.remove();
+        }
+    }
+    </script>
+
+</body>
+</html>

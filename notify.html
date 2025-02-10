@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="notify.css">
+    <script defer src="notify.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="vadavli.jpg" alt="Logo" class="logo">
+        <h1>A. P. Shah Institute Of Technology</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Notification Section -->
+        <section class="notifications">
+            <h2>Notifications</h2>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" onclick="filterNotifications('all')">All</button>
+                <button class="tab" onclick="filterNotifications('unread')">Unread</button>
+                <button class="tab" onclick="filterNotifications('read')">Read</button>
+            </div>
+
+            <!-- Notification List -->
+            <div class="notification-list">
+                <div class="notification-card unread">
+                    <input type="checkbox">
+                    <span class="star">⭐</span>
+                    <p><strong>Your Hall Ticket</strong> for Bandhan Asset Management has been generated.</p>
+                    <span class="date">Feb 07, 4:24 PM</span>
+                </div>
+
+                <div class="notification-card">
+                    <input type="checkbox">
+                    <span class="star">⭐</span>
+                    <p><strong>Group Discussion – IT Infra</strong> scheduled at 15:00, 11th Feb 2025.</p>
+                    <span class="date">Feb 07, 4:23 PM</span>
+                </div>
+            </div>
+
+            <p class="end-message">You have seen it all! Check back later for more.</p>
+        </section>
+    </div>
+
+</body>
+</html>

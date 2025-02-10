@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Details</title>
+    <link rel="stylesheet" href="newprof.css" />
+    <script defer src="professional.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="vadavli.jpg" alt="Logo" class="logo" />
+      <h1>A. P. Shah Institute Of Technology</h1>
+    </header>
+    <div class="container">
+      <form id="professionalForm">
+        <!-- <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter First Name" /> -->
+
+        <label for="course">Course</label>
+        <select id="course">
+          <option value="Information Technology">Information Technology</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="CSE Data Science">CSE Data Science</option>
+          <option value="CSE AIML">CSE AIML</option>
+          <option value="Civil">Civil</option>
+          <option value="Mechanical">Mechanical</option>
+        </select>
+
+        <label for="linkedin">LinkedIn Profile</label>
+        <input type="url" id="linkedin" placeholder="Enter LinkedIn Profile URL" />
+
+        <label for="github">GitHub Profile</label>
+        <input type="url" id="github" placeholder="Enter GitHub Profile URL" />
+
+        <label for="city">Current Address City</label>
+        <select id="city">
+          <option value="Mumbai">Mumbai</option>
+          <option value="Pune">Pune</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Aurangabad">Aurangabad</option>
+          <option value="Solapur">Solapur</option>
+          <option value="Amravati">Amravati</option>
+          <option value="Kolhapur">Kolhapur</option>
+          <option value="Thane">Thane</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="tenthSchool">10th School Name</label>
+        <input type="text" id="tenthSchool" placeholder="Enter School Name" />
+        <label for="tenth">10th Percentage</label>
+        <input type="number" id="tenth" placeholder="Enter 10th Percentage" />
+
+        <label for="twelfthInstitution">12th Institution Name</label>
+        <input type="text" id="twelfthInstitution" placeholder="Enter Institution Name" />
+        <label for="twelfth">12th Percentage</label>
+        <input type="number" id="twelfth" placeholder="Enter 12th Percentage" />
+
+        <label for="diplomaInstitution">Diploma Institution Name</label>
+        <input type="text" id="diplomaInstitution" placeholder="Enter Institution Name" />
+        <label for="diploma">Diploma Percentage</label>
+        <input type="number" id="diploma" placeholder="Enter Diploma Percentage" />
+
+        <label for="experience">Professional Experience</label>
+        <input type="text" id="experienceFirm" placeholder="Enter Firm Name" />
+        <textarea id="experience" placeholder="Enter Experience Details"></textarea>
+
+        <label for="certifications">Certifications</label>
+        <input type="text" id="certificationName" placeholder="Enter Certification Name" />
+        <textarea id="certifications" placeholder="Enter Certification Details"></textarea>
+
+        <label for="skills">Skills</label>
+        <textarea id="skills" placeholder="Enter Skills"></textarea>
+
+        <label for="projects">Projects</label>
+        <input type="text" id="projectName" placeholder="Enter Project Name" />
+        <textarea id="projects" placeholder="Enter Project Description"></textarea>
+
+        <label for="achievements">Achievements</label>
+        <textarea id="achievements" placeholder="Enter Achievements"></textarea>
+
+        <label for="volunteer">Volunteer Experience</label>
+        <textarea id="volunteer" placeholder="Enter Volunteer Experience"></textarea>
+
+        <label>Gap Year</label>
+        <div class="checkbox-group">
+          <input type="radio" id="gapYearYes" name="gapYear" value="yes" />
+          <label for="gapYearYes">Yes</label>
+          <input type="radio" id="gapYearNo" name="gapYear" value="no" checked />
+          <label for="gapYearNo">No</label>
+        </div>
+        <div id="gapYearField" style="display: none">
+          <label for="gapYear">Enter Gap Year</label>
+          <input type="number" id="gapYear" placeholder="Enter Gap Year" />
+        </div>
+
+        <label for="liveBacklog">Live Backlogs</label>
+        <input type="number" id="liveBacklog" placeholder="0" />
+
+        <label for="closedBacklog">Closed Backlogs</label>
+        <input type="number" id="closedBacklog" placeholder="0" />
+
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </body>
+</html>
